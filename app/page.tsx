@@ -1,20 +1,36 @@
 import { BlogPosts } from 'app/components/posts'
+import Image from 'next/image'
+import Link from 'next/link'
+
+
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter bg-white-500">
+        Nashville Number
       </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+
+      <p className="text-gray-500 whitespace-pre-wrap pb-4">
+        Nashville Number System made simple! Learn which numbers are being played based on what you play on your instrument.
+
       </p>
-      <div className="my-8">
-        <BlogPosts />
+      <div className="flex justify-center">
+        <div className="w-full max-w-[1000px] mx-auto">
+          <Image
+            src="/images/bass.png"
+            width={1000}
+            height={200}
+            alt="Syd on Bass"
+            className="rounded-lg object-cover w-full h-[350px] border border-black"
+          />
+        </div>
+      </div>
+      <div className="pt-4">
+        <Link href="/learn">
+          <button type="submit" className="bg-black text-white px-4 py-2 rounded hover:cursor-pointer">Get Started</button>
+
+        </Link>
       </div>
     </section>
   )
